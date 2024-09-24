@@ -10,12 +10,13 @@ const client = new MongoClient(url);
 async function connect(){
     await client.connect();
     const db = client.db(dbName);
+    collection = db.collection('data');
 
-    return db.collection('data');
+    return;
 }
 
 todos.get('/', async function (req, res) {
-    const collection = await connect();   
+    await connect();
     const findResult = await collection.find({}).toArray();
     client.close();
 
