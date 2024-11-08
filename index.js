@@ -9,6 +9,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use('/todos',todos);
-
+app.use('/news',news);
 
 app.listen(4000)

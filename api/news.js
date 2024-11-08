@@ -7,7 +7,6 @@ news.get('/', async function (req, res) {
     
     const api = await axios.get(`https://api-v2.deepsearch.com/v1/articles?api_key=02a270a26cfa43a4bb423a2c138880fc?page_size=30`)
     res.json( api.data )
-    console.log(m,s);
 })
 
 news.get('/search', async function (req, res) {
