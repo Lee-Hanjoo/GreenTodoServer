@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const todos = require('./api/todos.js');
+const news = require('./api/news.js');
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }))
