@@ -3,8 +3,7 @@ const todos = express.Router()
 const { MongoClient } = require('mongodb');
 
 const dbName = 'todos';
-const url = 'mongodb+srv://hanjoo:abcd1234@hanjoo.wxhmb.mongodb.net/?retryWrites=true&w=majority&appName=hanjoo';
-// const url = 'mongodb+srv://yicha7:test1234@cluster2.kjcecrw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster2';
+const url = process.env.MONGODB_URL
 const client = new MongoClient(url);
 
 let collection;
