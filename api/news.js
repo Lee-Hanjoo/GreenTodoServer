@@ -7,10 +7,10 @@ const apiKey = process.env.API_KEY;
 news.get('/', async function (req, res){
     const {articles, section} = req.query;
 
-    if(!articles) {
+    if(articles === '') {
         articles = 'articles'
     }
-    if(!section) {
+    if(section === '') {
         section = 'politics'
     }
 
@@ -21,10 +21,10 @@ news.get('/', async function (req, res){
 news.get('/search', async function (req, res){
     const {articles, keyword} = req.query;
     
-    if(!articles) {
+    if(articles === '') {
         articles = 'articles'
     }
-    if(!keyword) {
+    if(keyword === '') {
         keyword = '동물'
     }
 
