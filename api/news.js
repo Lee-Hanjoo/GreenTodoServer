@@ -1,8 +1,9 @@
 const express = require('express');
 const news = express.Router();
 const axios = require('axios');
-// const apiKey = process.env.API_KEY;
-const apiKey = '02a270a26cfa43a4bb423a2c138880fc';
+require("dotenv").config();
+const apiKey = process.env.API_KEY;
+
 
 
 news.get('/', async function (req, res){
