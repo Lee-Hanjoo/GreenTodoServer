@@ -2,9 +2,8 @@ const express = require('express');
 const news = express.Router();
 const axios = require('axios');
 require("dotenv").config();
+// 환경이 안만들어졌기 때문에, env를 쓰고싶으면 dotenv 사용해야함.
 const apiKey = process.env.API_KEY;
-
-
 
 news.get('/', async function (req, res){
     const {articles, section} = req.query;
